@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+   
+}
+.center {
+    display: grid;
+    place-items: center;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.banner-star {
+    background-image: url('../../../assets/img/estrellas-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 120px;    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: unset;
+    margin: unset;
+
+}
+
+.img-space {
+    padding: 5px;
+    margin: 5px;
+}

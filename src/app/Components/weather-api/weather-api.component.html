@@ -1,0 +1,52 @@
+<div class="parent-grid ">
+    <div class="span-6 yellow section center">
+        <h3>Necesitas comunicacion con otra pagina? </h3>
+        <p>Podemos mientras haya API disponible podemos integrar lo que necesites ! </p>
+        <div class="dropdown">
+            <input type="text" class="form-control dropdown-toggle" placeholder="Escriba una ciudad !"
+                [formControl]="cityControl" data-bs-toggle="dropdown" aria-expanded="false" />
+
+            <ul class="dropDown-square" *ngIf="citiesNames && citiesNames.length > 0">
+                <li *ngFor="let option of citiesNames" (click)="getClimate(option)">
+                    <a>{{option}}</a>
+                    <!-- <a class="dropdown-item" href="#" (click)="selectCity(option)">{{ option.name }}</a> -->
+                </li>
+            </ul>
+        </div>
+
+        <button class="btn btn-primary" (click)="getLocation()">Buscar</button>
+    </div>
+    <!-- <img src="assets/img/weather.png" class="img-weather"> -->
+    <div class="span-6 second-section ">
+        <h3>
+            {{selectedCity}}
+        </h3>
+        <table class="table table-striped table-dark" *ngIf="timeStamps.length > 0">
+            <thead>
+                <tr>
+                    <th scope="col"> Fecha: </th>
+                    <th scope="col" *ngFor="let item of timeStamps">
+                        {{item}}
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="col"> Max: </th>
+                    <td scope="row" *ngFor="let item of feltTemperatureMax">
+                        {{item}}
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col"> Min: </th>
+                    <td *ngFor="let item of feltTemperatureMin">
+                        {{item}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
