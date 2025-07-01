@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/pagina-andre",
+    "public": "dist/pagina-andre/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
